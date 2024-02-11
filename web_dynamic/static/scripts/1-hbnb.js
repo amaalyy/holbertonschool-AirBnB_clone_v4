@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(document).ready(() => {
   const amenities = {};
 
   $('input[type="checkbox"]').change(function () {
@@ -9,7 +9,7 @@ $(document).ready(function () {
     }
     let text = '';
     for (const amenity in amenities) {
-      text += amenities[amenity] + ', ';
+      text += `${amenities[amenity]}, `;
     }
     text = text.slice(0, -2);
     $('div.amenities h4').text(text);
